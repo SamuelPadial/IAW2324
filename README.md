@@ -10,3 +10,4 @@ Los programas que vamos a utilizar son los siguientes:
 - Docker
 - VirtualBox
 
+He modificado el archivo index.html del proyecto
