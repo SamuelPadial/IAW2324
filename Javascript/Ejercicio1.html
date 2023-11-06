@@ -11,9 +11,9 @@
 
     <div class="container">
        <div class="box"> 
-            <div class="circle1">
+            <div class="circle1" id="circulorojo">
             </div>
-            <button class="boton">ocultar</button>
+            <button class="boton" id="botonocultar" onclick="esconder()">ocultar</button>
         </div>
         <div class="box">
             <div class="circle2">
@@ -27,7 +27,16 @@
         </div>
     </div>
     <script>
-
+        function esconder (){
+            var visible = document.getElementById("circulorojo")
+            if (visible.style.visibility == "hidden"){
+                document.getElementById("circulorojo").style.visibility = "visible"
+            }
+            else{
+                document.getElementById("circulorojo").style.visibility = "hidden"  
+            }
+            
+        }
     </script>
 </body>
 </html>
