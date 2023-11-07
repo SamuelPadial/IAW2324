@@ -11,23 +11,32 @@
 
     <div class="container">
        <div class="box"> 
-            <div class="circle1">
+            <div class="circle1" id="circulorojo">
             </div>
-            <button class="boton">ocultar</button>
+            <button class="boton" onclick="esconder('circulorojo')">ocultar</button>
         </div>
         <div class="box">
-            <div class="circle2">
+            <div class="circle2" id="circuloverde">
             </div>
-            <button class="boton">ocultar</button>
+            <button class="boton" onclick="esconder('circuloverde')">ocultar</button>
         </div>
         <div class="box">
-            <div class="circle3">
+            <div class="circle3" id="circuloazul">
             </div>
-            <button class="boton">ocultar</button>
+            <button class="boton" onclick="esconder('circuloazul')">ocultar</button>
         </div>
     </div>
     <script>
-
+        function esconder (id){
+            var visible = document.getElementById(id)
+            if (visible.style.visibility == "hidden"){
+                document.getElementById(id).style.visibility = "visible"
+            }
+            else{
+                document.getElementById(id).style.visibility = "hidden"  
+            }
+            
+        }
     </script>
 </body>
 </html>
