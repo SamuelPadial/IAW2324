@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <form action="">
+        <label for="altura">Introduce tu altura en cm</label>
+        <input type="text" id="altura">
+        <label for="peso">Introduce tu peso en kg</label>
+        <input type="text" id="peso">
+        <input type="button" id="calcula" value="Calcula" onclick="imccal()">
+    </form>
+
+    <p id="mensajeimc"></p>
+    
+    <script>
+        function imccal(){
+        var altini =  parseInt(document.getElementById("altura").value)
+        var altfin = (altini/100)**2
+        var pes = parseInt(document.getElementById("peso").value)
+
+        var operacion = (pes/altfin).toFixed(2)
+
+        if (operacion <18.5){
+            document.getElementById("mensajeimc").innerHTML = "Peso inferior a lo normal, tu imc es: " + operacion 
+
+        }
+        else if (operacion <=24.9 && operacion >=18.5){
+            document.getElementById("mensajeimc").innerHTML = "peso normal, tu imc es: " + operacion 
+
+        }
+        else if (operacion >=25 && operacion <=29.9){
+            document.getElementById("mensajeimc").innerHTML = "Peso superior a lo normal, tu imc es: " + operacion 
+        }
+        else if(isNaN(operacion)){
+            document.getElementById("mensajeimc").innerHTML = "Por favor, introduzca valores numericos"
+        }
+        else{
+            document.getElementById("mensajeimc").innerHTML = "obesidad, tu imc es: " + operacion 
+        }
+        }
+    </script>
+</body>
+</html>

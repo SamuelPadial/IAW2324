@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Social</title>
+</head>
+<body>
+    <form action="">
+        <textarea type=text id="mensaje" rows="10" cols="30" onclick="borrartext()">¿Que estas pensando...?</textarea>
+        <button id="publicar" onclick="savemesage()">Publicar</button>
+
+        <div id="publicacion">
+
+        </div>
+    </form>
+    <script>
+        function borrartext(){
+            document.getElementById("mensaje").innerHTML = "";
+        }
+
+        function savemesage(){
+            var men = document.getElementById("publicar").value;
+            document.getElementById("publicacion").innerHTML = men
+        }
+    </script>
+</body>
+</html>
