@@ -6,13 +6,36 @@
     <title>Ejercicio2</title>
 </head>
 <body>
+
     <form action="">
-        <label for="cajatexto">Introduce el valor monetario: </label>
-        <input type="text" id="cajatexto">
-        <input type="button" id="dolar" value="$">
-        <input type="button" id="euro" value="€"> 
+        <label for="monedas">Introduce tu cantidad monetaria</label>
+        <input type="number" id="monedas">
+        <input type="button" id="dolar" value="$" onclick="eurtodol()">
+        <input type="button" id="euro" value="€" onclick="doltoeur()">
     </form>
 
-    <div><p>Tu cambio es: </p></div>
+    <p id="mensaje"></p>
+
+    <script>
+        function eurtodol(){
+            var mon = document.getElementById("monedas").value;
+            if(mon < 0){
+                document.getElementById("mensaje").innerHTML ="Introduzca un valor positivo";
+            } 
+            else{
+                document.getElementById("mensaje").innerHTML = "Su cambio es: " + parseFloat(mon*1.068) + "$";
+            }
+        }
+        function doltoeur(){
+            var mon = document.getElementById("monedas").value;
+            if(mon < 0){
+                document.getElementById("mensaje").innerHTML ="Introduzca un valor positivo";
+            } 
+            else{
+                document.getElementById("mensaje").innerHTML = "Su cambio es: " + parseFloat(mon*0.935) + "€";
+            }
+        }
+
+    </script>
 </body>
 </html>
