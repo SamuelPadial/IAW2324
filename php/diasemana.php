@@ -15,13 +15,13 @@
             case "Monday":
                 echo "Hoy es Lunes";
                 break;
-            case "Thursday":
+            case "Tuesday":
                 echo "Hoy es Martes";
                 break;
-            case "Thuesday":
+            case "Wednesday":
                 echo "Hoy es Miercoles";
                 break;
-            case "Wednesday":
+            case "Thursday":
                 echo "Hoy es Jueves";
                 break;
             case "Friday":
