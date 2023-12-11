@@ -6,7 +6,7 @@
     <title>Saludo</title>
 </head>
 <body>
-    <form action="formulario.php" method="post">
+    <form action="saludo.php" method="post">
         <label for="name">Nombre</label>
         <input type="text" id="name">
         <input type="button" onclick="">
