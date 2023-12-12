@@ -9,7 +9,7 @@
     <form action="saludo.php" method="post">
         <label for="name">Nombre</label>
         <input type="text" id="name">
-        <input type="button" onclick="<?php echo htmlspecialchars($_POST['name']); ?>">
+        <p><input type="sumbit" value="enviar"></p>
     </form>
     
 </body>
